@@ -4,10 +4,10 @@
   Layout = "_layout";
 }
 
-<p><a href="/">Main Page</a></p>
-<form action="/jobs/delete" method="post">
-  <button type="submit">Delete all jobs</button>
-</form>
+
+<h2>Navigation Bar</h2>
+<p><a href='/'>Main Page</a></p>
+<p><a href='/jobs'>View all jobs</a></p>
 
 <h1>Job Openings</h1>
 
@@ -20,7 +20,15 @@
 {
   <div>
     <p>@job.Title</p>
+    <li><a href='/jobs/@job.Id'>@job.Title</a></li>
     <p>[job description]</p>
     <p>[contact info]</p>
   </div>
 }
+
+<p><a href='/jobs/new'>Add another job</a></p>
+<button class="btn btn-success">Add another job</button>
+
+<form action="/jobs/delete" method="post">
+  <button type="submit" class="btn btn-danger">Delete all jobs</button>
+</form>
