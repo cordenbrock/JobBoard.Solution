@@ -1,8 +1,8 @@
+@using JobBoard.Models;
+
 @{
   Layout = "_layout";
 }
-
-@using JobBoard.Models;
 
 <h1>Job Openings</h1>
 
@@ -11,10 +11,13 @@
   <h3>No jobs have been posted yet!</h3>
 }
 
+@foreach (Job job in Model)
+{
 <div>
-  <p>[title]</p>
+  <p>@job.Title</p>
   <p>[job description]</p>
   <p>[contact info]</p>
 </div>
+}
 
 <p><a href="/">Main Page</a></p>

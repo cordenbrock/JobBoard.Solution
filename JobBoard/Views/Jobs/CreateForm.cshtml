@@ -1,13 +1,13 @@
 @{
-    Layout = "_layout";
+  Layout = "_layout";
 }
 
 <h1> Post a Job</h1>
 
-<form>
-    <label for="title">Job Title:</label>
-    <input id="title" name="title" type="text">
-    <button type="submit">Submit</button>
+<form action="/jobs" method="post">
+  <label for="title">Job Title:</label>
+  <input id="title" name="title" type="text">
+  <button type="submit">Submit</button>
 </form>
 
 <p><a href="/">Main Page</a></p>
