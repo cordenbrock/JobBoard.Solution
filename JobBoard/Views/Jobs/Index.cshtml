@@ -4,11 +4,6 @@
   Layout = "_layout";
 }
 
-
-<h2>Navigation Bar</h2>
-<p><a href='/'>Main Page</a></p>
-<p><a href='/jobs'>View all jobs</a></p>
-
 <h1>Job Openings</h1>
 
 @if (@Model.Count == 0)
@@ -21,13 +16,12 @@
   <div>
     <p>@job.Title</p>
     <li><a href='/jobs/@job.Id'>@job.Title</a></li>
-    <p>[job description]</p>
-    <p>[contact info]</p>
+    <li>[job description]</li>
+    <li>[contact info]</li>
   </div>
 }
 
-<p><a href='/jobs/new'>Add another job</a></p>
-<button class="btn btn-success">Add another job</button>
+<a href='/jobs/new'><button class="btn btn-success">Add another job</button></a>
 
 <form action="/jobs/delete" method="post">
   <button type="submit" class="btn btn-danger">Delete all jobs</button>
