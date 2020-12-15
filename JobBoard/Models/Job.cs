@@ -24,5 +24,10 @@ namespace JobBoard.Models
     {
       _instances.Clear();
     }
+
+    public static Job Find(int searchId)
+    {
+      return _instances[searchId - 1];
+    }
   }
 }

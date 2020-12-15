@@ -105,8 +105,7 @@ namespace JobBoard.Tests
       Job newJob2 = new Job(title02);
 
       //Act
-      Job result = new Job("Incorrect test job");
-      // Job result = Job.Find(2);
+      Job result = Job.Find(2);
 
       //Assert
       Assert.AreEqual(newJob2, result);
