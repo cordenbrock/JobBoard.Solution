@@ -9,8 +9,7 @@ namespace JobBoard.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      List<Job> allJobs = Job.GetAll();
-      return View(allJobs);
+      return View();
     }
   }
 }
