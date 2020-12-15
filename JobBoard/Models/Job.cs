@@ -5,12 +5,16 @@ namespace JobBoard.Models
   public class Job
   {
     public string Title { get; set; }
+    public string Description { get; set; }
+    public string Contact { get; set; }
     public int Id { get; }
     private static List<Job> _instances = new List<Job> { };
 
-    public Job(string title)
+    public Job(string title, string description, string contact)
     {
       Title = title;
+      Description = description;
+      Contact = contact;
       _instances.Add(this);
       Id = _instances.Count;
     }
@@ -29,5 +33,8 @@ namespace JobBoard.Models
     {
       return _instances[searchId - 1];
     }
+
+
+
   }
 }
