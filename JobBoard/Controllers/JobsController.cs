@@ -25,5 +25,12 @@ namespace JobBoard.Controllers
       Job newJob = new Job(title);
       return RedirectToAction("Index");
     }
+
+    [HttpPost("/jobs/delete")]
+    public ActionResult DeleteAll()
+    {
+      Job.ClearAll();
+      return RedirectToAction("Index");
+    }
   }
 }
