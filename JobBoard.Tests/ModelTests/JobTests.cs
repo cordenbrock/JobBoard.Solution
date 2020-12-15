@@ -95,20 +95,21 @@ namespace JobBoard.Tests
       Assert.AreEqual(1, result);
     }
 
-    // [TestMethod]
-    // public void Find_ReturnsCorrectJob_Job()
-    // {
-    //   //Arrange
-    //   string title01 = "Walk the dog";
-    //   string title02 = "Wash the dishes";
-    //   Job newJob1 = new Job(title01);
-    //   Job newJob2 = new Job(title02);
+    [TestMethod]
+    public void Find_ReturnsCorrectJob_Job()
+    {
+      //Arrange
+      string title01 = "Walk the dog";
+      string title02 = "Wash the dishes";
+      Job newJob1 = new Job(title01);
+      Job newJob2 = new Job(title02);
 
-    //   //Act
-    //   Job result = Job.Find(2);
+      //Act
+      Job result = new Job("Incorrect test job");
+      // Job result = Job.Find(2);
 
-    //   //Assert
-    //   Assert.AreEqual(newJob2, result);
-    // }
+      //Assert
+      Assert.AreEqual(newJob2, result);
+    }
   }
 }
