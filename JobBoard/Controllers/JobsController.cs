@@ -39,5 +39,13 @@ namespace JobBoard.Controllers
       Job foundJob = Job.Find(id);
       return View(foundJob);
     }
+
+    [HttpPost("/jobs/{id}")]
+    public ActionResult Destroy(int id)
+    {
+      Job foundJob = Job.Find(id);
+      Job.DeleteJob(foundJob.Id);
+      return RedirectToAction("Index");
+    }
   }
 }

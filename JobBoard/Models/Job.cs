@@ -34,6 +34,10 @@ namespace JobBoard.Models
       return _instances[searchId - 1];
     }
 
+    public static void DeleteJob(int id)
+    {
+      _instances.RemoveAll(r => r.Id == id);
+    }
 
 
   }

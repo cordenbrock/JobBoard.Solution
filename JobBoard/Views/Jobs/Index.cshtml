@@ -14,11 +14,12 @@
 @foreach (Job job in Model)
 {
   <div>
-    <p>@job.Title</p>
     <li><a href='/jobs/@job.Id'>@job.Title</a></li>
     <li>@job.Description</li>
     <li>@job.Contact</li>
+    <li>@job.Id</li>
   </div>
+  <br>
 }
 
 <a href='/jobs/new'><button class="btn btn-success">Add another job</button></a>
